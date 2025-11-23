@@ -1,0 +1,203 @@
+1418884
+   303502   1     1  0         1000.0000  Amount         4648.0008000  No   
+   303501   1     1  0          564.8001  Percnt         4083.2007000  Yes  
+   
+   ORD710B - option 11 == PRO530B
+   UME6022
+   
+    13304                    CALL(E)   'ORD710B'     P0004    
+
+Job:   TEST123        User:   LEVERM         Number:   007680          
+Thread:   000012CC                                                     
+                                                                       
+                                                                       
+Type  Program                  Statement         Procedure             
+      ORD700D2   BPCSUSRO                        _QRNP_PEP_ORD700D2    
+      ORD700D2   BPCSUSRO      39787             ORD700D2              
+      PRO530B    BPCSUSRO                        _QRNP_PEP_PRO530B     
+      PRO530B    BPCSUSRO      8554              PRO530B               
+      PRO770B    BPCSUSRO                        _QRNP_PEP_PRO770B     
+      PRO770B    BPCSUSRO      5896              PRO770B               
+      QTEVIREF   QSYS                     /0475                        
+      QTESTOPH   QSYS                            _C_pep                
+      QTESTOPH   QSYS          200               main                  
+      QTENPTS    QSYS          20                qtescren              
+      QTENPTS    QSYS          36                ProgramSource         
+      QUIDSPP    QSYS                     /00E4                        
+      QUIMGFLW   QSYS                     /03C3                        
+	  
+	  PRO77B *entry 
+	  *ENTRY        PLIST                                      
+              PARM                    RTPARM ='I'           1
+              PARM                    W1PLST             
+              PARM                    W1SLST            
+
+EVAL W1PLST                                                             
+W1PFLR OF W1PLST =                                                      
+          ....5...10...15...20...25...30...35...40...45...50...55...60  
+     1   '0100141888400001                                            ' 
+    61   '                                                            ' 
+   121   '                                                            ' 
+   181   '                                                            ' 
+   241   '                '                                             
+W1MODE OF W1PLST = 01.                                                  
+W1ORTY OF W1PLST = '0'                                                  
+W1ORNO OF W1PLST = 01418884.                                            
+W1ORLN OF W1PLST = 0000.                                                
+W1CPDW OF W1PLST = '1'                                                  
+
+ W1SFLR OF W1SLST =                                                      
+           ....5...10...15...20...25...30...35...40...45...50...55...60  
+      1  ' PY0000002ABCD0E0   ° USD      °   j  ¬¤¬   ' 
+     61   '    °           ¤       MG 04                   ' 
+    121   '       1         ° MCFA   Â  NY15746823  0       8    ' 
+    181   '   8                                                ' 
+    241   '                '                                             
+ W1RTYP OF W1SLST = 'P'                                                  
+ W1SPOT OF W1SLST = 'Y'                                                  
+ W1DSPP OF W1SLST = '0'                                                  
+ W1PM01 OF W1SLST = '0'                                                  
+ W1PM02 OF W1SLST = '0'                                                  
+ W1PM03 OF W1SLST = '0'                  
+
+Option 11 reprice
+Type  Program                  Statement         Procedure             
+      ORD700D2   BPCSUSRO                        _QRNP_PEP_ORD700D2    
+      ORD700D2   BPCSUSRO      38355             ORD700D2              
+      ORD710B    BPCSUSRO                        _QRNP_PEP_ORD710B     
+      ORD710B    BPCSUSRO      12064             ORD710B               
+      ORD708B    BPCSUSRO                        _QRNP_PEP_ORD708B     
+      ORD708B    BPCSUSRO      6869              ORD708B               
+      PRO530B    BPCSUSRO                        _QRNP_PEP_PRO530B     
+      PRO530B    BPCSUSRO      14399             PRO530B               
+      PRO770B    BPCSUSRO                        _QRNP_PEP_PRO770B     
+      PRO770B    BPCSUSRO      5896              PRO770B               
+	  
+*entry 
+RTPARM = 'I' 
+EVAL W1PLST                                                             
+W1PFLR OF W1PLST =                                                      
+          ....5...10...15...20...25...30...35...40...45...50...55...60  
+     1   '0100141888400000                                            ' 
+    61   '                                                            ' 
+   121   '                                                            ' 
+   181   '                                                            ' 
+   241   '                '                                             
+W1MODE OF W1PLST = 01.                                                  
+W1ORTY OF W1PLST = '0'                                                  
+W1ORNO OF W1PLST = 01418884.                                            
+W1ORLN OF W1PLST = 0000.                                                
+W1CPDW OF W1PLST = '0'                                                  
+
+EVAL W1SLST                                                             
+W1RTYP OF W1SLST = 'P'    
+W1SPOT OF W1SLST = 'Y'    
+W1DSPP OF W1SLST = '0'    
+W1PM01 OF W1SLST = '0'    
+W1PM02 OF W1SLST = '0'    
+W1PM03 OF W1SLST = '0'    
+W1PM04 OF W1SLST = '0'    
+W1PM05 OF W1SLST = '0'    
+W1PRBS OF W1SLST = '2'    
+W1LPM1 OF W1SLST = 'A'    
+W1LPM2 OF W1SLST = 'B'    
+W1LPM3 OF W1SLST = 'C'    
+W1LPM4 OF W1SLST = 'D'    
+W1LPM5 OF W1SLST = '0' 
+W1LPM6 OF W1SLST = 'E'        
+W1INVL OF W1SLST = '0'        
+W1DSPR OF W1SLST = 0.         
+W1DLCU OF W1SLST = 000020900. 
+W1CURR OF W1SLST = 'USD'      
+W1COMP OF W1SLST = 001.       
+W1SHIP OF W1SLST = 00000.     
+W1SLCU OF W1SLST = 000020900. 
+W1SHCU OF W1SLST = 000020910. 
+W1STS5 OF W1SLST = 0.         
+W1APPR OF W1SLST = 1.         
+W1EDTE OF W1SLST = 020201105. 
+W1RDTE OF W1SLST = 020210129. 
+W1PRBD OF W1SLST = 020201105. 
+W1QORL OF W1SLST = 00000001.000            
+W1CUST OF W1SLST = 000020900.              
+W1REG OF W1SLST = '      '                 
+W1TOEA OF W1SLST = 0000000005698.00        
+W1NVFC OF W1SLST = 00000001.0000000        
+W1WHSE OF W1SLST = 'MG '                   
+W1PRSC OF W1SLST = '04'                    
+W1DTOT OF W1SLST = 0000000005698.00        
+W1BTOT OF W1SLST = 0000000005698.00        
+W1OTDS OF W1SLST = 0000000000000.00        
+W1TAXA OF W1SLST = 0000000000000.00        
+W1FILO OF W1SLST = '1'                     
+W1OCNF OF W1SLST = 00000001.0000000        
+W1OPRC OF W1SLST = 000020900.              
+W1OPRG OF W1SLST = 'MCFA  '        
+W1OHSL OF W1SLST = 0002622.        
+W1OCDC OF W1SLST = '20'            
+W1OSSL OF W1SLST = 'N'             
+W1OWPR OF W1SLST = 'Y'             
+W1OS01 OF W1SLST = '1'             
+W1OS02 OF W1SLST = '5'             
+W1OS03 OF W1SLST = '7'             
+W1OS04 OF W1SLST = '4'             
+W1OS05 OF W1SLST = '6'             
+W1OS06 OF W1SLST = '8'             
+W1OS07 OF W1SLST = '2'             
+W1OS08 OF W1SLST = '3'             
+W1OCAL OF W1SLST = '1'      
+W1BPAV OF W1SLST = ' '               
+W1TPAV OF W1SLST = '0'               
+W1DIV1 OF W1SLST = 00000001.0000000  
+W1MET1 OF W1SLST = '8'               
+W1DIV2 OF W1SLST = 00000001.0000000  
+W1MET2 OF W1SLST = '8'               
+W1HPPB OF W1SLST = 0000000000000.00  
+W1HPQB OF W1SLST = 00000000.000      
+W1HDTC OF W1SLST = 0.                
+W1HAPB OF W1SLST = 0000000005133.20  
+W1HAQB OF W1SLST = 00000001.000             
+                                                    
+
+
+
++++++++++++++++++++++++++++++++
+                            DATA BASE UTILITY (DBU)                       
+ File  . . . : PRICE002    Member . . : PRICE002    Record Length . :     
+   Library . : BPCSUSRF    Format . . : PRICE002    File Access . . :   Ar
+                           Mode . . . : Display     Record Number . :     
+ Control . . .             Text . . . : PRICE PROTECTION                  
+            1                                                             
+   Record#  Order Number                                                  
+          1   1418998                                                     
+                                                                          
+																		  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+			  
+	
+	
+	
